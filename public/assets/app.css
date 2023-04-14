@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* width: 799px; */
+    width: 558px;
+    height: 597px;
+    border-radius: 14px;
+}
+::-webkit-scrollbar {
+    width: 4px;
+  }
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #d53369 0%, #e48c1a 100%);
+    border-radius: 25px;
+}
+.bg-grad{
+  /* background: linear-gradient(90deg, rgba(173,127,251,1) 0%, rgba(146,191,253,1) 100%); */
+  /* background: linear-gradient(90deg, rgba(150,100,235,1) 0%, rgba(109,164,240,1) 100%); */
+  /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
+  background: linear-gradient(90deg, #d53369 0%, #e48c1a 100%) !important;
+}
+
+.popover{
+  transform: translate3d(286px, 2px, 0px) !important
+}
+.color-shadow{
+  box-shadow: 2px 3px 5px #b8b8b8;
+}
+.color-selected{
+  /* border-width: 2px; */
+  border: 4px solid transparent;
+  /* border-image: linear-gradient(90deg, #d53369 0%, #e48c1a 100%); */
+  background:linear-gradient(white, white) padding-box, linear-gradient(to right, #d53369, #e48c1a) border-box;
+  border-radius: 100%;
+}

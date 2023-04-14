@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .view-modal{
+    @apply flex overflow-x-hidden backdrop-blur overflow-y-auto fixed inset-0 z-50 justify-center items-center outline-none focus:outline-none;
+  }
+  .btn-close{
+    @apply inline-flex absolute top-[13px] right-[5px] z-10 items-center p-2 mr-2 text-sm font-medium text-center text-gray-400 bg-[#333] hover:bg-black rounded-full focus:ring-2 focus:outline-none;
+  }
+  .dark-card{
+    @apply flex relative flex-col pt-6 w-full rounded-t-[30px] rounded-b-lg border-0 shadow-lg outline-none focus:outline-none;
+  }
+  .modal-background-black{
+    @apply fixed inset-0 z-40 bg-black opacity-80 backdrop-blur;
+  }
+  .btn-login-icon{
+    @apply flex relative justify-center items-center py-2 px-4 mr-1 mb-1 w-full text-xs font-medium text-white bg-transparent rounded-md border border-gray-500 shadow hover:shadow-md transition-all duration-150 ease-linear cursor-pointer outline-none focus:outline-none;
+  }
+  .flex-center{
+    @apply flex justify-center items-center;
+  }
+  .input-style{
+    @apply block mb-[30px] py-2 px-4 w-full text-sm text-gray-800 placeholder:text-gray-800 font-medium placeholder:font-medium bg-orange-100 rounded-full border-2 border-orange-700/40 focus:outline-none;
+  }
+  .btn-color{
+    @apply cursor-pointer py-2 px-4 my-3 mr-1 mb-1 w-full text-sm font-medium text-white rounded-full shadow hover:shadow-lg transition-all duration-150 ease-linear outline-none focus:outline-none;
+  }
+  .error-msg{
+    @apply mt-1 absolute text-red-400 text-xs w-full left-[18px];
+  }
+  .popover-style{
+    @apply bg-gray-900/80 backdrop-blur-sm absolute border-0 mt-3 block z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg;
+  }
+  .radio-style{
+    @apply w-4 h-4 text-blue-600 bg-gray-600 border-gray-600 focus:ring-blue-500;
+  }
+  .radio-label{
+    @apply ml-2 text-sm font-normal text-white dark:text-gray-300;
+  }
+  .radio-div{
+    @apply flex items-center w-full hover:bg-black/20 p-2;
+  }
+  .sub-tabs{
+    @apply block font-medium text-xs leading-tight border-transparent hover:border-transparent focus:border-transparent;
+  }
+  
+}
