@@ -9,7 +9,7 @@ import { SupportedSites } from "./modules/supportedSites/SupportedSites";
 import NavBar from "./modules/navbar/NavBar";
 import SupportedSitesPage from "./supportedSitesPage/supportedSitesPage";
 import { BsCart } from "react-icons/bs";
-import skatchBlackLogo from "../../public/ss-icon.png";
+import skatchBlackLogo from "../../public/black-icon.png";
 import Image from "next/image";
 import { updateConfigNoLogin } from "@/app/modules/auth/slices/authSlice";
 export const Tabs: any = (props: any) => {
@@ -161,8 +161,8 @@ export const Tabs: any = (props: any) => {
 
               {!currentUrl && (
                 <SupportedSites
-                  title={"This site is not supported by skatch"}
-                  supportedSite={"see list of supported sites"}
+                  title={"This site is not yet supported."}
+                  supportedSite={"browse supported sites"}
                   setShowSuggestion={setShowSuggestion}
                 />
               )}
@@ -224,8 +224,8 @@ export const Tabs: any = (props: any) => {
               </div>
               {!currentUrl && (
                 <SupportedSites
-                  title={"This site is not supported by skatch"}
-                  supportedSite={"see list of supported sites"}
+                  title={"This site is not yet supported."}
+                  supportedSite={"browse supported sites"}
                   setShowSuggestion={setShowSuggestion}
                 />
               )}

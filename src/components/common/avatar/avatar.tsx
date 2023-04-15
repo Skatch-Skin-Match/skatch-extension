@@ -93,7 +93,7 @@ const Avatar = (props: AvatarProps) => {
           className="text-white text-sm"
           onClick={() => props.setShowModel(true)}
         >
-          Login/Signup
+          Login/Sign Up
         </button>
       )}
     </div>

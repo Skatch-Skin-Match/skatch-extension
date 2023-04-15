@@ -90,7 +90,7 @@ const SignUpForm = (props: any) => {
                     </div>
                     <div className="flex-center flex-col w-full">
                       <p className="text-center text-xs text-[#333] mt-4 mb-2">
-                        Already have an account ?
+                        Already have an account?
                       </p>
                       <Button
                         className={

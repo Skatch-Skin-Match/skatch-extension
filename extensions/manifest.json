@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "version": "0.1",
-  "name": "Skatch",
-  "short_name": "Skatch",
-  "description": "skatch-skin-match",
+  "version": "1.1",
+  "name": "skinshift: Shopping Skin Match",
+  "short_name": "skinshift",
+  "description": "skinshift",
   "action": {
     "default_popup": "./dist/index.html"
   },

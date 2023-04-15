@@ -217,13 +217,13 @@ export const HistoryAndPreset: any = (props: any) => {
         </div>
       </div>
       {!token && (
-        <p className="text-black text-sm capitalize pb-1 my-3 ">
+        <p className="text-black text-sm pb-1 my-3 ">
           Sign up to see your uploaded skin tones.
         </p>
       )}
       <div>
-        <p className="text-black text-sm capitalize font-semibold border-b border-gray-600 pb-1">
-          preset
+        <p className="text-black text-sm font-semibold border-b border-gray-600 pb-1">
+          presets
         </p>
         <div className="flex items-center gap-3">
           {presets?.map((preset: any) => (

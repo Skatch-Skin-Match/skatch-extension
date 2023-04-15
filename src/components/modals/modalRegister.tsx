@@ -102,9 +102,9 @@ const Modal = (props: ModalProps) => {
               <div className="">
                 <div className="flex-center flex-col w-full">
                   <p className="text-white font-semibold text-[24px] capitalize">
-                    Welcome to skatch
+                    Sign up for Skinshift
                   </p>
-                  <p className="text-white text-sm text-center">Please login to your account</p>
+                  <p className="text-white text-sm text-center">Or, log into your account below.</p>
                 </div>
                 {!isShowRegister ? (
                   <LoginForm
