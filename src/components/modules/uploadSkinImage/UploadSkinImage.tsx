@@ -82,7 +82,9 @@ export const UploadSkinImage: any = (props: any) => {
             <h4 className="font-semibold text-base text-gray-600">
               {userData.profilePicture ? "Detected Skin" : "Detect Skin Tone"}
             </h4>
-            {isError && <h4 className="font-semibold text-base text-gray-600">{errorMessage}</h4>}
+            <h4 className="text-base text-gray-600">
+              { isError ? "Please sign up to detect this skin tone." : null }
+            </h4>
             <img
               className="w-[120px] h-[120px] my-3"
               // src={imageDataUrl}
