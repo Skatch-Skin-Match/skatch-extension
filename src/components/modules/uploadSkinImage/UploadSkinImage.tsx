@@ -31,18 +31,21 @@ export const UploadSkinImage: any = (props: any) => {
       setFile(URL.createObjectURL(e.target.files[0]));
       setUploadedFile(e.target.files[0]);
       setImageDetails(true);
-      await handleSubmit(e.target.files[0]).then((res) => {
-        setTimeout(() => {
-          window.close();
-        }, 2000);
-      });
+      
+      await handleSubmit(e.target.files[0]);
+      // .then((res) => {
+      //   setTimeout(() => {
+      //     window.close();
+      //   }, 2000);
+      // });
+      
     }
     //TODO: create form-data from 'file'
   };
 
   const handleButtonCliCk = () => {
     let a = window.location.href;
-
+    console.log("AI told me to do this");
     window.open(a, "_blank");
   };
 
@@ -115,7 +118,18 @@ export const UploadSkinImage: any = (props: any) => {
                   token ? "cursor-pointer" : "cursor-not-allowed"
                 }`}
               >
-                {!openNewTab ? (
+                <input
+                    className="opacity-0 w-[128px] h-[34px]"
+                    type="file"
+                    accept="image/png, image/jpg, image/jpeg"
+                    onChange={handleChange}
+                    // onClick={openNewTab}
+                  />
+
+                {// THIS IS COMMENTED OUT BECAUSE AI SAID IT WAS OPENING A NEW TAB FOR NO REASON...
+                }
+
+                {/* {!openNewTab ? (
                   <input
                     className="opacity-0 w-[128px] h-[34px]"
                     type="file"
@@ -131,7 +145,9 @@ export const UploadSkinImage: any = (props: any) => {
                     //   onChange={handleChange}
                     onClick={handleButtonCliCk}
                   />
-                )}
+                )} */}
+
+
               </div>
             </div>
           </>
