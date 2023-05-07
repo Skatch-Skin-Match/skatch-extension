@@ -223,7 +223,7 @@ export const HistoryAndPreset: any = (props: any) => {
       )}
       <div>
         <p className="text-black text-sm font-semibold border-b border-gray-600 pb-1">
-          presets
+          Presets
         </p>
         <div className="flex items-center gap-3">
           {presets?.map((preset: any) => (

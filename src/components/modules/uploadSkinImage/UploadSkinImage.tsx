@@ -65,6 +65,7 @@ export const UploadSkinImage: any = (props: any) => {
       })
       .catch((err) => {
         setErrorMessage(err.data.message);
+        console.log(err.data.message);
       });
   };
 
@@ -83,7 +84,7 @@ export const UploadSkinImage: any = (props: any) => {
               {userData.profilePicture ? "Detected Skin" : "Detect Skin Tone"}
             </h4>
             <h4 className="text-base text-gray-600">
-              { isError ? "Please sign up to detect this skin tone." : null }
+              { isError ? errorMessage : null }
             </h4>
             <img
               className="w-[120px] h-[120px] my-3"
