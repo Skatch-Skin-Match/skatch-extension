@@ -143,4 +143,5 @@ productContainer.forEach((item: any) => {
 // productContainerPDP.forEach((item: any) => {
 //   observerPdp.observe(item);
 // });
+
 export {};

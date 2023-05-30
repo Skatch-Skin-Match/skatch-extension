@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     content: "./src/scripts/content.ts",
     background: "./src/scripts/background.ts",
+    contentForUniqlo: "./src/scripts/contentForUniqlo.ts",
   },
 
   output: {
