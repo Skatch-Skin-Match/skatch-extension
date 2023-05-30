@@ -1,6 +1,10 @@
 const imageStyle = "pointer-events: none;";
 const filteredImageClass = "filtered-image";
 
+// below commented code is also working if read the it ,it requires setTime function as dom loads before page , therefore second method has been used which targets all the images on the page.
+
+// first method
+
 // const handleIntersection = async (entries: IntersectionObserverEntry[]) => {
 //   // console.log(entries, "entries");
 //   // console.log("getting here");
@@ -55,6 +59,7 @@ const filteredImageClass = "filtered-image";
 //   });
 // }, 3000);
 
+// second method
 const observer = new IntersectionObserver((entries) => {
   // Create an IntersectionObserver instance that will be triggered when images are in the viewport
   chrome.storage.local.get(["Toggle"]).then(async (response) => {
