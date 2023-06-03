@@ -20,7 +20,7 @@
     },
     {
       "matches": ["https://www.uniqlo.com/*"],
-      "js": ["contentForUniqlo.js"]
+      "js": ["contentUniqlo.js"]
     }
   ],
   "background": {
