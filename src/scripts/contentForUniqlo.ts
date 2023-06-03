@@ -52,14 +52,47 @@ const handleIntersection = async (entries: IntersectionObserverEntry[]) => {
 };
 
 const observer = new IntersectionObserver(handleIntersection);
-setTimeout(() => {
-  let productItems: any;
-  productItems = document.querySelectorAll(".fr-ec-product-tile-resize-wrapper");
-  console.log("product", productItems);
-  productItems?.forEach((item: any) => {
-    observer.observe(item);
-  });
-}, 5000);
+
+
+// setTimeout(() => {
+//   let productItems: any;
+//   productItems = document.querySelectorAll(".fr-ec-product-tile-resize-wrapper");
+//   console.log("product", productItems);
+//   productItems?.forEach((item: any) => {
+//     observer.observe(item);
+//   });
+// }, 1000);
+
+
+
+// Function to start observing a node with your intersection observer.
+function observeNode(node: any) {
+  observer.observe(node);
+}
+
+// INITIAL OBSERVATION
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.message === 'TabUpdated') {
+    setTimeout(() => {
+      document.querySelectorAll(".fr-ec-product-tile-resize-wrapper").forEach(observeNode);
+    }, 3000);
+  }
+});
+
+// OBSERVATIONS THEREAFTER
+// Create a MutationObserver instance to add new nodes to your intersection observer.
+const mutationObserver = new MutationObserver((mutationsList, observer) => {
+  // Look through all mutations that just occured.
+  for(let mutation of mutationsList) {
+    // If the addedNodes property has one or more nodes.
+    if(mutation.addedNodes.length) {
+      mutation.addedNodes.forEach(observeNode);
+    }
+  }
+});
+
+// Start observing the document with the configured mutations observer.
+mutationObserver.observe(document.body, { childList: true, subtree: true });
 
 // second method
 

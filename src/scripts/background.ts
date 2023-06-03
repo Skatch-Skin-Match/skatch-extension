@@ -63,6 +63,12 @@ chrome.tabs.query(
   },
 );
 
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && tab.active) {
+    chrome.tabs.sendMessage(tabId, { message: 'TabUpdated' });
+  }
+});
+
 // chrome.storage.onChanged.addListener(function (changes, namespace) {
 //   if (namespace === "local") {
 //     console.log("====================================");
